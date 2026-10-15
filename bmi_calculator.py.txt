@@ -1,0 +1,33 @@
+
+# BMI Calculator - Beginner Python Project
+
+print("================================")
+print("       BMI CALCULATOR")
+print("================================")
+
+# Get user details
+name = input("Enter your name: ")
+
+weight = float(input("Enter your weight in kg: "))
+height = float(input("Enter your height in metres: "))
+
+# Calculate BMI
+if weight <= 0 or height <= 0:
+    print("Error: Weight and height must be greater than zero.")
+else:
+    bmi = weight / (height * height)
+
+    print("\nHello,", name)
+    print("Your BMI is:", round(bmi, 2))
+
+    # Display BMI category for adults
+    if bmi < 18.5:
+        print("Category: Underweight")
+    elif bmi < 25:
+        print("Category: Normal weight")
+    elif bmi < 30:
+        print("Category: Overweight")
+    else:
+        print("Category: Obesity")
+
+print("\nThank you for using the BMI Calculator!")
